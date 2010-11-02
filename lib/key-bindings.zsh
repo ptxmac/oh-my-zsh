@@ -30,7 +30,7 @@ bindkey '^[[Z' reverse-menu-complete
 #bindkey '^[[B' down-line-or-search
 #bindkey '^[^[[C' emacs-forward-word
 #bindkey '^[^[[D' emacs-backward-word
-#
+
 #bindkey -s '^X^Z' '%-^M'
 #bindkey '^[e' expand-cmd-path
 #bindkey '^[^I' reverse-menu-complete
@@ -40,3 +40,9 @@ bindkey '^[[Z' reverse-menu-complete
 ## Fix weird sequence that rxvt produces
 #bindkey -s '^[[Z' '\t'
 #
+
+bindkey '^[[5C' emacs-forward-word 
+bindkey '^[[5D' emacs-backward-word 
+bindkey '^[[1;5D' emacs-backward-word 
+bindkey '^[[1;5C' emacs-forward-word 
+
