@@ -21,3 +21,8 @@ alias ll='ls -l'
 alias sl=ls # often screw this up
 
 alias afind='ack-grep -il'
+
+# ptx's
+
+alias df='df -h'
+alias du='du -h'
