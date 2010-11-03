@@ -23,4 +23,6 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 
 export PATH=$PATH:$HOME/.cabal/bin
+export PATH=$PATH:$HOME/.gem/ruby/1.8/bin
+
 alias cemacs="/Applications/Emacs.app/Contents/MacOS/bin/emacsclient"
