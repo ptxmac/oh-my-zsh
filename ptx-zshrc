@@ -16,7 +16,7 @@ export ZSH_THEME="ptx"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git osx brew github)
+plugins=(git osx brew github gitflow)
 
 source $ZSH/oh-my-zsh.sh
 
