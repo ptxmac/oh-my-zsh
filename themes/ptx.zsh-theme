@@ -1,16 +1,17 @@
-# based on funky
+# based on candy
 
-# Taken from Tassilo's Blog
-# http://tsdh.wordpress.com/2007/12/06/my-funky-zsh-prompt/
+# TODO
+# - look at funky
 
-local blue_op="%{$fg[blue]%}[%{$reset_color%}"
-local blue_cp="%{$fg[blue]%}]%{$reset_color%}"
-local path_p="${blue_op}%~${blue_cp}"
-local user_host="${blue_op}%n@%m${blue_cp}"
-local ret_status="${blue_op}%?${blue_cp}"
-local hist_no="${blue_op}%h${blue_cp}"
-local smiley="%(?,%{$fg[green]%}:%)%{$reset_color%},%{$fg[red]%}:(%{$reset_color%})"
-PROMPT="╭─${path_p}─${user_host}─${ret_status}─${hist_no}
-╰─${blue_op}${smiley}${blue_cp} %# "
-local cur_cmd="${blue_op}%_${blue_cp}"
-PROMPT2="${cur_cmd}> "
+local path_p="%{$reset_color%}%{$fg[red]%}[%~]%{$reset_color%}"
+local time_p="%{$fg[blue]%}%D{[%I:%M:%S]}"
+local smiley="%(?,%{$fg[green]%}:%)%{$reset_color%},%{$fg[red]%}%? :(%{$reset_color%})"
+
+
+PROMPT=$'╭─%{$fg_bold[green]%}%n@%m ${path_p} ${time_p} $(git_prompt_info)\
+╰─%{$fg[blue]%}[${smiley}]%{$fg_bold[blue]%} %#%{$reset_color%} '
+
+ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[green]%}["
+ZSH_THEME_GIT_PROMPT_SUFFIX="]%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_DIRTY=" %{$fg[red]%}*%{$fg[green]%}"
+ZSH_THEME_GIT_PROMPT_CLEAN=""
