@@ -4,7 +4,7 @@
 # - look at funky
 
 local path_p="%{$reset_color%}%{$fg[red]%}[%~]%{$reset_color%}"
-local time_p="%{$fg[blue]%}%D{[%I:%M:%S]}"
+local time_p="%{$fg[blue]%}%D{[%H:%M:%S]}"
 local smiley="%(?,%{$fg[green]%}:%)%{$reset_color%},%{$fg[red]%}%? :(%{$reset_color%})"
 
 
