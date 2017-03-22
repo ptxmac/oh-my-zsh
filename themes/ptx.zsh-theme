@@ -3,7 +3,7 @@
 # TODO
 # - look at funky
 
-local h_color="red"
+local h_color="blue"
 
 if [[ -n $host_color ]]; then
     h_color=$host_color
@@ -11,7 +11,16 @@ fi
 
 local path_p="%{$reset_color%}%{$fg[red]%}[%~]%{$reset_color%}"
 local time_p="%{$fg[blue]%}%D{[%H:%M:%S]}"
-local hostuser_p="%{$fg_bold[blue]%}%n%{$reset_color%}@%{$fg_bold[${h_color}]%}%m%{$reset_color%}"
+
+
+if [ -n "$SSH_CLIENT" ]; then
+    local hostuser_p="%{$fg_bold[blue]%}%n%{$reset_color%}@%{$fg_bold[${h_color}]%}%m%{$reset_color%}"
+else
+    local hostuser_p="%{$fg_bold[blue]%}%n%{$reset_color%}"
+fi
+
+
+
 local smiley="%(?,%{$fg[green]%}:%)%{$reset_color%},%{$fg[red]%}%? :(%{$reset_color%})"
 
 
